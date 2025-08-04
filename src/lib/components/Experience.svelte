@@ -65,7 +65,7 @@
     .timeline::before {
         content: "";
         position: absolute;
-        left: 0.75rem;
+        left: 0.5rem;
         top: 0;
         bottom: 0;
         width: 2px;
@@ -79,7 +79,7 @@
 
     .timeline-marker {
         position: absolute;
-        left: -1.25rem;
+        left: -2rem;
         top: 1rem;
         width: 1rem;
         height: 1rem;
@@ -182,11 +182,15 @@
         }
 
         .timeline {
-            padding-left: 1.5rem;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            left: 0.85rem;
         }
 
         .timeline-marker {
-            left: -1rem;
+            left: -1.5rem;
         }
 
         .job-header {
