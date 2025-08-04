@@ -31,6 +31,17 @@
                         linkedin.com/in/jacoblewinski
                     </a>
                 </div>
+                <div class="contact-item">
+                    <span class="label">GitHub:</span>
+                    <a
+                        href={profile.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-link"
+                    >
+                        github.com/JLewinski
+                    </a>
+                </div>
             </div>
         </div>
 

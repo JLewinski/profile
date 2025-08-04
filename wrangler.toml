@@ -1,0 +1,13 @@
+# Cloudflare Pages configuration
+name = "profile"
+compatibility_date = "2024-08-01"
+
+[build]
+command = "pnpm run build"
+publish = "build"
+
+[env.production]
+# You can add environment variables here if needed
+
+[env.preview]
+# Preview environment variables

@@ -3,6 +3,7 @@
     import Summary from "$lib/components/Summary.svelte";
     import Experience from "$lib/components/Experience.svelte";
     import Education from "$lib/components/Education.svelte";
+    import Projects from "$lib/components/Projects.svelte";
     import Footer from "$lib/components/Footer.svelte";
     import { profileData } from "$lib/data/profile";
 </script>
@@ -20,6 +21,7 @@
     <Summary profile={profileData} />
     <Experience profile={profileData} />
     <Education profile={profileData} />
+    <Projects profile={profileData} />
 </main>
 
 <Footer profile={profileData} />

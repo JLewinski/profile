@@ -26,6 +26,14 @@
                 >
                     LinkedIn Profile
                 </a>
+                <a
+                    href={profile.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="footer-link"
+                >
+                    GitHub Profile
+                </a>
             </div>
         </div>
 
