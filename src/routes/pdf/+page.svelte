@@ -19,15 +19,27 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <span class="label">Email:</span>
-                    <span class="value">{profileData.email}</span>
+                    <a href="mailto:{profileData.email}" class="contact-link"
+                        >{profileData.email}</a
+                    >
                 </div>
                 <div class="contact-item">
                     <span class="label">LinkedIn:</span>
-                    <span class="value">{profileData.linkedin}</span>
+                    <a
+                        href={profileData.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-link">linkedin.com/in/jacoblewinski</a
+                    >
                 </div>
                 <div class="contact-item">
                     <span class="label">GitHub:</span>
-                    <span class="value">{profileData.github}</span>
+                    <a
+                        href={profileData.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-link">github.com/JLewinski</a
+                    >
                 </div>
             </div>
         </div>
@@ -159,9 +171,15 @@
         color: #374151;
     }
 
-    .contact-item .value {
-        color: #6b7280;
+    .contact-link {
+        color: #10b981;
+        text-decoration: none;
         margin-left: 0.5rem;
+        font-weight: 500;
+    }
+
+    .contact-link:hover {
+        text-decoration: underline;
     }
 
     .pdf-section {
@@ -288,6 +306,11 @@
             margin: 0;
             max-width: none;
             width: 100%;
+        }
+
+        .contact-link {
+            color: #10b981 !important;
+            text-decoration: none;
         }
 
         .pdf-section {
