@@ -44,14 +44,14 @@ export const profileData: ProfileData = {
             company: "Alliance Technical Group",
             position: "Senior Software Developer",
             duration: "September 2024 - Present",
-            description: ["Currently serving as Senior Software Developer, continuing to build and maintain enterprise applications."],
+            description: ["Lead development of enterprise applications, architect scalable solutions, and mentor junior developers while maintaining high-quality code standards and best practices."],
             includeInPDF: true
         },
         {
             company: "Alliance Technical Group",
             position: "Software Developer II",
             duration: "August 2023 - September 2024 (1 year 2 months)",
-            description: ["Advanced to Software Developer II role, taking on increased responsibilities in application development and team leadership."],
+            description: ["Promoted to Software Developer II with expanded responsibilities in application architecture, team leadership, and cross-functional project coordination to deliver robust software solutions."],
             includeInPDF: true
         },
         {
@@ -59,8 +59,8 @@ export const profileData: ProfileData = {
             position: "Software Engineer",
             duration: "September 2021 - July 2023 (1 year 11 months)",
             description: [
-                "Developing and maintaining applications for various clients. Most applications are ASP.NET MVC applications. Other applications include ASP.NET CORE MVC, Console Applications, and mobile applications.",
-                "Developing tables, views, and stored procedures in SQL database for applications to interface with."
+                "Developed and maintained multi-client applications using ASP.NET MVC, ASP.NET Core MVC, and mobile technologies, ensuring scalable and efficient solutions across diverse platforms.",
+                "Designed and implemented database schemas, views, and stored procedures in SQL Server to optimize application performance and data integrity."
             ],
             includeInPDF: true
         },
@@ -70,7 +70,7 @@ export const profileData: ProfileData = {
             duration: "April 2020 - September 2021 (1 year 6 months)",
             location: "Huntsville, Alabama, United States",
             description: [
-                "Full Stack development using .NET products. Developed many internal WPF applications as well as working on a larger WPF application as well as a new ASP.NET Core MVC application."
+                "Engineered full-stack solutions using .NET technologies, developing multiple internal WPF applications and contributing to large-scale WPF and ASP.NET Core MVC projects for enterprise clients."
             ],
             includeInPDF: true
         },
@@ -79,8 +79,8 @@ export const profileData: ProfileData = {
             position: "Electronics Engineer",
             duration: "June 2019 - April 2020 (11 months)",
             description: [
-                "Developing and maintaining applications (.NET) to enable testing and development of embedded systems as well as some applications for general project management.",
-                "Additionally develop and maintain the embedded systems (C++)."
+                "Developed .NET applications to support testing and development of embedded systems, streamlining project management workflows and improving operational efficiency.",
+                "Maintained and enhanced embedded systems using C++, ensuring reliable performance in critical defense applications."
             ],
             includeInPDF: true
         },
@@ -90,8 +90,8 @@ export const profileData: ProfileData = {
             duration: "January 2017 - June 2019 (2 years 6 months)",
             location: "Auburn, Alabama",
             description: [
-                "Full stack web development using mainly Visual Studio and Microsoft SQL Server Management Studio. Here I learned and developed with C#, SQL, JS, MVC, Knockout.js, etc. I worked with a team of fellow COOP students to develop web applications.",
-                "For my last year I was the leader of our team as a mentor."
+                "Collaborated in an agile team environment to develop full-stack web applications using C#, SQL, JavaScript, MVC, and Knockout.js with Visual Studio and SQL Server Management Studio.",
+                "Promoted to team leader and mentor role, providing guidance and technical leadership to fellow cooperative education students while maintaining project delivery standards."
             ],
             includeInPDF: true
         },
