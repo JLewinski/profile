@@ -7,10 +7,19 @@
 <header class="header">
     <div class="container">
         <div class="header-content">
-            <div class="name-title">
-                <h1 class="name">{profile.name}</h1>
-                <h2 class="title">{profile.title}</h2>
-                <p class="location">{profile.location}</p>
+            <div class="profile-section">
+                <div class="profile-image-container">
+                    <img
+                        src="/profile.jpg"
+                        alt="{profile.name} - Professional headshot"
+                        class="profile-image"
+                    />
+                </div>
+                <div class="name-title">
+                    <h1 class="name">{profile.name}</h1>
+                    <h2 class="title">{profile.title}</h2>
+                    <p class="location">{profile.location}</p>
+                </div>
             </div>
 
             <div class="contact-info">
@@ -74,8 +83,35 @@
         display: grid;
         grid-template-columns: 1fr auto;
         gap: 2rem;
-        align-items: start;
+        align-items: center;
         margin-bottom: 2rem;
+    }
+
+    .profile-section {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .profile-image-container {
+        flex-shrink: 0;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .profile-image:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
     }
 
     .name-title {
@@ -174,10 +210,22 @@
         .header-content {
             grid-template-columns: 1fr;
             gap: 1.5rem;
+            text-align: center;
+        }
+
+        .profile-section {
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
         }
 
         .contact-info {
-            text-align: left;
+            text-align: center;
         }
 
         .name {
@@ -186,6 +234,25 @@
 
         .title {
             font-size: 1.25rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .profile-section {
+            gap: 1rem;
+        }
+
+        .profile-image {
+            width: 80px;
+            height: 80px;
+        }
+
+        .name {
+            font-size: 2rem;
+        }
+
+        .title {
+            font-size: 1.125rem;
         }
     }
 </style>
