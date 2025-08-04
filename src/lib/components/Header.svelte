@@ -55,7 +55,28 @@
         </div>
 
         <div class="skills-section">
-            <h3 class="skills-title">Top Skills</h3>
+            <div class="skills-header">
+                <h3 class="skills-title">Top Skills</h3>
+                <a href="/pdf" class="pdf-button" target="_blank">
+                    <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path
+                            d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                        />
+                        <polyline points="14,2 14,8 20,8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                        <polyline points="10,9 9,9 8,9" />
+                    </svg>
+                    Download PDF
+                </a>
+            </div>
             <div class="skills-list">
                 {#each profile.topSkills as skill}
                     <span class="skill-tag">{skill}</span>
@@ -176,10 +197,39 @@
         padding-top: 2rem;
     }
 
+    .skills-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
     .skills-title {
         font-size: 1.25rem;
-        margin: 0 0 1rem 0;
+        margin: 0;
         font-weight: 600;
+    }
+
+    .pdf-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        text-decoration: none;
+        border-radius: 1.5rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        transition: all 0.2s ease;
+    }
+
+    .pdf-button:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-1px);
+        text-decoration: none;
     }
 
     .skills-list {
@@ -226,6 +276,16 @@
 
         .contact-info {
             text-align: center;
+        }
+
+        .skills-header {
+            flex-direction: column;
+            gap: 1rem;
+            align-items: stretch;
+        }
+
+        .pdf-button {
+            align-self: center;
         }
 
         .name {

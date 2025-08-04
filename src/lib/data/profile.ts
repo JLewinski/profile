@@ -5,6 +5,7 @@ export interface Experience {
     duration: string;
     location?: string;
     description: string[];
+    includeInPDF: boolean;
 }
 
 export interface Education {
@@ -43,13 +44,15 @@ export const profileData: ProfileData = {
             company: "Alliance Technical Group",
             position: "Senior Software Developer",
             duration: "September 2024 - Present",
-            description: ["Currently serving as Senior Software Developer, continuing to build and maintain enterprise applications."]
+            description: ["Currently serving as Senior Software Developer, continuing to build and maintain enterprise applications."],
+            includeInPDF: true
         },
         {
             company: "Alliance Technical Group",
             position: "Software Developer II",
             duration: "August 2023 - September 2024 (1 year 2 months)",
-            description: ["Advanced to Software Developer II role, taking on increased responsibilities in application development and team leadership."]
+            description: ["Advanced to Software Developer II role, taking on increased responsibilities in application development and team leadership."],
+            includeInPDF: true
         },
         {
             company: "Powerserve",
@@ -58,7 +61,8 @@ export const profileData: ProfileData = {
             description: [
                 "Developing and maintaining applications for various clients. Most applications are ASP.NET MVC applications. Other applications include ASP.NET CORE MVC, Console Applications, and mobile applications.",
                 "Developing tables, views, and stored procedures in SQL database for applications to interface with."
-            ]
+            ],
+            includeInPDF: true
         },
         {
             company: "Torch Technologies, Inc.",
@@ -67,7 +71,8 @@ export const profileData: ProfileData = {
             location: "Huntsville, Alabama, United States",
             description: [
                 "Full Stack development using .NET products. Developed many internal WPF applications as well as working on a larger WPF application as well as a new ASP.NET Core MVC application."
-            ]
+            ],
+            includeInPDF: true
         },
         {
             company: "Robins Air Force Base",
@@ -76,7 +81,8 @@ export const profileData: ProfileData = {
             description: [
                 "Developing and maintaining applications (.NET) to enable testing and development of embedded systems as well as some applications for general project management.",
                 "Additionally develop and maintain the embedded systems (C++)."
-            ]
+            ],
+            includeInPDF: true
         },
         {
             company: "Auburn University - Campus Web Solutions",
@@ -86,7 +92,8 @@ export const profileData: ProfileData = {
             description: [
                 "Full stack web development using mainly Visual Studio and Microsoft SQL Server Management Studio. Here I learned and developed with C#, SQL, JS, MVC, Knockout.js, etc. I worked with a team of fellow COOP students to develop web applications.",
                 "For my last year I was the leader of our team as a mentor."
-            ]
+            ],
+            includeInPDF: true
         },
         {
             company: "Best Buy",
@@ -95,7 +102,8 @@ export const profileData: ProfileData = {
             location: "Mayfield Heights, OH",
             description: [
                 "Provide customers with a complete solution through selling computer products and services."
-            ]
+            ],
+            includeInPDF: false
         },
         {
             company: "Sandbox Computers for Kids, Inc.",
@@ -104,7 +112,8 @@ export const profileData: ProfileData = {
             location: "Thousand Oaks, California",
             description: [
                 "Responsibilities include, but are not limited to, designing applications for teaching material and administrative purposes, teaching students K-12, collaborating on curriculum content development, developing lesson plans, reviewing assignments, assigning and mentoring students on projects, participating in faculty development, teaching in one of our studios, traveling to schools / after-schools to conduct classes, and supporting promotional and outreach activities."
-            ]
+            ],
+            includeInPDF: false
         }
     ],
     education: [
