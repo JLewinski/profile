@@ -37,7 +37,7 @@ export const profileData: ProfileData = {
     linkedin: "https://www.linkedin.com/in/jacoblewinski",
     github: "https://github.com/JLewinski",
     topSkills: ["ASP.NET Core", "JavaScript", "SQL", "Dev Ops", "Svelte"],
-    summary: "I am an experienced software developer specialized in building web applications that enhance the lives of the others. I have a strong foundation with years of experience using ASP.NET Core MVC with vanilla JS. Recently, I have helped multiple projects grow by modernizing the tech stack to include a frontend framework like Svelte and React. I have enjoyed experimenting with different technologies and the differences in performance and developer experience.",
+    summary: "I am an experienced software developer specialized in building web applications that enhance the lives of others. I have a strong foundation with years of experience using ASP.NET Core MVC with vanilla JS. Recently, I have helped multiple projects grow by modernizing the tech stack to include a frontend framework like Svelte and React. I have enjoyed experimenting with different technologies and the differences in performance and developer experience.",
     personalNote: "When I'm not working or learning, I am a loving husband and father. Lately I have been cherishing the time I get to play with my one-year-old daughter and going on dates with my amazing wife.",
     experience: [
         {
