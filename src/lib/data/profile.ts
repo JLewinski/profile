@@ -37,21 +37,28 @@ export const profileData: ProfileData = {
     linkedin: "https://www.linkedin.com/in/jacoblewinski",
     github: "https://github.com/JLewinski",
     topSkills: ["ASP.NET Core", "JavaScript", "SQL", "Dev Ops", "Svelte"],
-    summary: "I am an experienced software developer specialized in building web applications that enhance the lives of the others. I have a strong foundation with years of experience using ASP.NET Core MVC with vanilla JS. Recently, I have helped multiple projects grow by modernizing the tech stack to include a frontend framework like Svelte and React. I have enjoyed experimenting with different technologies and the differences in performance and developer experience.",
-    personalNote: "When I'm not working or learning, I am a loving husband and father. Lately I have been cherishing the time I get to play with my one-year-old daughter and going on dates with my amazing wife.",
+    summary: "Results-driven Senior Software Engineer with deep expertise in architecting and delivering performant, maintainable, and secure web applications. Proven success modernizing legacy .NET solutions, elevating frontend experiences with contemporary frameworks (Svelte, React), and improving developer velocity through clean architecture, automation, and effective mentoring. Passionate about translating business objectives into scalable technical solutions and continuously elevating code quality, reliability, and user experience.",
+    personalNote: "Outside of engineering, I'm a dedicated husband and father, continually inspired by time with my wife and young daughter—fueling both balance and purpose in my professional craft.",
     experience: [
         {
             company: "Alliance Technical Group",
             position: "Senior Software Developer",
             duration: "September 2024 - Present",
-            description: ["Lead development of enterprise applications, architect scalable solutions, and mentor junior developers while maintaining high-quality code standards and best practices."],
+            description: [
+                "Architect scalable enterprise applications, elevate code quality standards, and mentor engineers while advancing modernization initiatives across the .NET and frontend stacks.",
+                "Drove rigorous code review practices and mentorship, fostering a collaborative engineering culture and accelerating skill development within the team.",
+                "All in addition to responsibilities held as Software Developer II."
+            ],
             includeInPDF: true
         },
         {
             company: "Alliance Technical Group",
             position: "Software Developer II",
             duration: "August 2023 - September 2024 (1 year 2 months)",
-            description: ["Promoted to Software Developer II with expanded responsibilities in application architecture, team leadership, and cross-functional project coordination to deliver robust software solutions."],
+            description: [
+                "Led modernization of legacy ASP.NET MVC features to contemporary component-based frontends (Svelte 5 / React), improving maintainability and user experience.",
+                "Implemented data access and API enhancements using Entity Framework (code-first & database-first), FastEndpoints, and modern tooling to streamline delivery."
+            ],
             includeInPDF: true
         },
         {
@@ -59,8 +66,9 @@ export const profileData: ProfileData = {
             position: "Software Engineer",
             duration: "September 2021 - July 2023 (1 year 11 months)",
             description: [
-                "Developed and maintained multi-client applications using ASP.NET MVC, ASP.NET Core MVC, and mobile technologies, ensuring scalable and efficient solutions across diverse platforms.",
-                "Designed and implemented database schemas, views, and stored procedures in SQL Server to optimize application performance and data integrity."
+                "Delivered and supported multiple web applications using ASP.NET MVC / Core, ensuring robustness, performance, and clean separation of concerns.",
+                "Engineered optimized SQL Server schemas, views, and stored procedures to enhance data integrity and application responsiveness.",
+                "Refactored hard-coded SQL data layers to Entity Framework, significantly improving maintainability and testability."
             ],
             includeInPDF: true
         },
@@ -70,7 +78,7 @@ export const profileData: ProfileData = {
             duration: "April 2020 - September 2021 (1 year 6 months)",
             location: "Huntsville, Alabama, United States",
             description: [
-                "Engineered full-stack solutions using .NET technologies, developing multiple internal WPF applications and contributing to large-scale WPF and ASP.NET Core MVC projects for enterprise clients."
+                "Developed full-stack solutions leveraging .NET and WPF for internal tooling and large-scale enterprise initiatives, contributing reusable components and production-quality features."
             ],
             includeInPDF: true
         },
@@ -79,8 +87,8 @@ export const profileData: ProfileData = {
             position: "Electronics Engineer",
             duration: "June 2019 - April 2020 (11 months)",
             description: [
-                "Developed .NET applications to support testing and development of embedded systems, streamlining project management workflows and improving operational efficiency.",
-                "Maintained and enhanced embedded systems using C++, ensuring reliable performance in critical defense applications."
+                "Built .NET applications to streamline embedded systems testing workflows and improve engineering efficiency within mission-focused environments.",
+                "Maintained and enhanced C++ embedded software, ensuring reliability and alignment with stringent operational requirements."
             ],
             includeInPDF: true
         },
@@ -90,8 +98,8 @@ export const profileData: ProfileData = {
             duration: "January 2017 - June 2019 (2 years 6 months)",
             location: "Auburn, Alabama",
             description: [
-                "Collaborated in an agile team environment to develop full-stack web applications using C#, SQL, JavaScript, MVC, and Knockout.js with Visual Studio and SQL Server Management Studio.",
-                "Promoted to team leader and mentor role, providing guidance and technical leadership to fellow cooperative education students while maintaining project delivery standards."
+                "Delivered full-stack web solutions using C#, SQL, Entity Framework, JavaScript, MVC, and Knockout.js in an agile environment.",
+                "Promoted to team lead, providing technical direction, mentoring peers, and ensuring consistent delivery quality across student development teams."
             ],
             includeInPDF: true
         },
@@ -101,7 +109,7 @@ export const profileData: ProfileData = {
             duration: "June 2016 - August 2016 (3 months)",
             location: "Mayfield Heights, OH",
             description: [
-                "Provide customers with a complete solution through selling computer products and services."
+                "Advised customers on end-to-end computing solutions, aligning product capabilities with user needs."
             ],
             includeInPDF: false
         },
@@ -111,7 +119,7 @@ export const profileData: ProfileData = {
             duration: "June 2015 - October 2015 (5 months)",
             location: "Thousand Oaks, California",
             description: [
-                "Responsibilities include, but are not limited to, designing applications for teaching material and administrative purposes, teaching students K-12, collaborating on curriculum content development, developing lesson plans, reviewing assignments, assigning and mentoring students on projects, participating in faculty development, teaching in one of our studios, traveling to schools / after-schools to conduct classes, and supporting promotional and outreach activities."
+                "Developed instructional and administrative applications; created curriculum and lesson plans; instructed K-12 students; mentored project work; and supported outreach initiatives."
             ],
             includeInPDF: false
         }
