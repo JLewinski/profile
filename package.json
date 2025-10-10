@@ -26,5 +26,8 @@
 			"sharp",
 			"workerd"
 		]
+	},
+	"dependencies": {
+		"docx": "^9.5.1"
 	}
 }

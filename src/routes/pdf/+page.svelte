@@ -1,11 +1,374 @@
 <script lang="ts">
     import { profileData } from "$lib/data/profile.js";
+    import {
+        Document,
+        Packer,
+        Paragraph,
+        TextRun,
+        HeadingLevel,
+        AlignmentType,
+        BorderStyle,
+        UnderlineType,
+    } from "docx";
+
+    async function downloadAsWord() {
+        // Create document sections
+        const sections: Paragraph[] = [];
+
+        // Header with name and title
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: profileData.name,
+                        bold: true,
+                        size: 32,
+                        color: "10b981",
+                    }),
+                ],
+                alignment: AlignmentType.LEFT,
+                spacing: { after: 100 },
+            })
+        );
+
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: profileData.title,
+                        size: 24,
+                        color: "374151",
+                    }),
+                ],
+                spacing: { after: 50 },
+            })
+        );
+
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: profileData.location,
+                        size: 20,
+                        color: "6b7280",
+                    }),
+                ],
+                spacing: { after: 200 },
+            })
+        );
+
+        // Contact Information
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: "Email: ",
+                        bold: true,
+                    }),
+                    new TextRun({
+                        text: profileData.email,
+                        color: "10b981",
+                    }),
+                ],
+                spacing: { after: 50 },
+            })
+        );
+
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: "LinkedIn: ",
+                        bold: true,
+                    }),
+                    new TextRun({
+                        text: "linkedin.com/in/jacoblewinski",
+                        color: "10b981",
+                    }),
+                ],
+                spacing: { after: 50 },
+            })
+        );
+
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: "GitHub: ",
+                        bold: true,
+                    }),
+                    new TextRun({
+                        text: "github.com/JLewinski",
+                        color: "10b981",
+                    }),
+                ],
+                spacing: { after: 300 },
+            })
+        );
+
+        // Core Skills Section
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: "Core Skills",
+                        bold: true,
+                        size: 24,
+                        color: "10b981",
+                    }),
+                ],
+                heading: HeadingLevel.HEADING_2,
+                spacing: { after: 100 },
+                border: {
+                    bottom: {
+                        color: "e5e7eb",
+                        space: 1,
+                        style: BorderStyle.SINGLE,
+                        size: 6,
+                    },
+                },
+            })
+        );
+
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: profileData.topSkills.join(" • "),
+                        size: 20,
+                    }),
+                ],
+                spacing: { after: 300 },
+            })
+        );
+
+        // Professional Summary Section
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: "Professional Summary",
+                        bold: true,
+                        size: 24,
+                        color: "10b981",
+                    }),
+                ],
+                heading: HeadingLevel.HEADING_2,
+                spacing: { after: 100 },
+                border: {
+                    bottom: {
+                        color: "e5e7eb",
+                        space: 1,
+                        style: BorderStyle.SINGLE,
+                        size: 6,
+                    },
+                },
+            })
+        );
+
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: profileData.summary,
+                        size: 20,
+                    }),
+                ],
+                spacing: { after: 300 },
+            })
+        );
+
+        // Professional Experience Section
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: "Professional Experience",
+                        bold: true,
+                        size: 24,
+                        color: "10b981",
+                    }),
+                ],
+                heading: HeadingLevel.HEADING_2,
+                spacing: { after: 100 },
+                border: {
+                    bottom: {
+                        color: "e5e7eb",
+                        space: 1,
+                        style: BorderStyle.SINGLE,
+                        size: 6,
+                    },
+                },
+            })
+        );
+
+        for (const exp of profileData.experience.filter(
+            (e) => e.includeInPDF
+        )) {
+            // Position and Duration
+            sections.push(
+                new Paragraph({
+                    children: [
+                        new TextRun({
+                            text: exp.position,
+                            bold: true,
+                            size: 22,
+                        }),
+                        new TextRun({
+                            text: `\t${exp.duration}`,
+                            size: 20,
+                            color: "6b7280",
+                        }),
+                    ],
+                    spacing: { after: 50 },
+                })
+            );
+
+            // Company and Location
+            sections.push(
+                new Paragraph({
+                    children: [
+                        new TextRun({
+                            text: exp.company + (exp.location ? ` • ${exp.location}` : ""),
+                            size: 20,
+                            color: "6b7280",
+                            italics: true,
+                        }),
+                    ],
+                    spacing: { after: 100 },
+                })
+            );
+
+            // Description bullets
+            for (const desc of exp.description) {
+                sections.push(
+                    new Paragraph({
+                        children: [
+                            new TextRun({
+                                text: desc,
+                                size: 20,
+                            }),
+                        ],
+                        bullet: {
+                            level: 0,
+                        },
+                        spacing: { after: 50 },
+                    })
+                );
+            }
+
+            sections.push(
+                new Paragraph({
+                    text: "",
+                    spacing: { after: 200 },
+                })
+            );
+        }
+
+        // Education Section
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: "Education",
+                        bold: true,
+                        size: 24,
+                        color: "10b981",
+                    }),
+                ],
+                heading: HeadingLevel.HEADING_2,
+                spacing: { after: 100 },
+                border: {
+                    bottom: {
+                        color: "e5e7eb",
+                        space: 1,
+                        style: BorderStyle.SINGLE,
+                        size: 6,
+                    },
+                },
+            })
+        );
+
+        for (const edu of profileData.education) {
+            sections.push(
+                new Paragraph({
+                    children: [
+                        new TextRun({
+                            text: edu.degree,
+                            bold: true,
+                            size: 22,
+                        }),
+                        new TextRun({
+                            text: `\t${edu.duration}`,
+                            size: 20,
+                            color: "6b7280",
+                        }),
+                    ],
+                    spacing: { after: 50 },
+                })
+            );
+
+            sections.push(
+                new Paragraph({
+                    children: [
+                        new TextRun({
+                            text: edu.institution + (edu.location ? ` • ${edu.location}` : ""),
+                            size: 20,
+                            color: "6b7280",
+                            italics: true,
+                        }),
+                    ],
+                    spacing: { after: 200 },
+                })
+            );
+        }
+
+        // Create document
+        const doc = new Document({
+            sections: [
+                {
+                    properties: {},
+                    children: sections,
+                },
+            ],
+        });
+
+        // Generate and download
+        const blob = await Packer.toBlob(doc);
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = `${profileData.name.replace(/\s+/g, "_")}_Resume.docx`;
+        link.click();
+        URL.revokeObjectURL(url);
+    }
 </script>
 
 <svelte:head>
     <title>{profileData.name} - Resume</title>
     <meta name="description" content="Resume of {profileData.name}" />
 </svelte:head>
+
+<div class="download-actions">
+    <button onclick={downloadAsWord} class="download-btn">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download as Word
+    </button>
+</div>
 
 <div class="pdf-resume">
     <!-- Header Section -->
@@ -115,6 +478,47 @@
         line-height: 1.4;
         color: #333;
         background: white;
+    }
+
+    .download-actions {
+        max-width: 8.5in;
+        margin: 1rem auto;
+        padding: 0 0.75in;
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.5rem;
+    }
+
+    .download-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.625rem 1.25rem;
+        background: #10b981;
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+    }
+
+    .download-btn:hover {
+        background: #059669;
+        box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+        transform: translateY(-1px);
+    }
+
+    .download-btn:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+    }
+
+    .download-btn svg {
+        width: 20px;
+        height: 20px;
     }
 
     .pdf-resume {
@@ -299,6 +703,10 @@
         :global(body) {
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
+        }
+
+        .download-actions {
+            display: none;
         }
 
         .pdf-resume {
