@@ -2,6 +2,349 @@
     import type { ProfileData } from "$lib/data/profile";
 
     let { profile }: { profile: ProfileData } = $props();
+    import {
+        Document,
+        Packer,
+        Paragraph,
+        TextRun,
+        HeadingLevel,
+        AlignmentType,
+        BorderStyle,
+    } from "docx";
+
+    async function downloadAsWord() {
+        // Create document sections
+        const sections: Paragraph[] = [];
+
+        // Header with name and title
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: profile.name,
+                        bold: true,
+                        size: 32,
+                        color: "10b981",
+                    }),
+                ],
+                alignment: AlignmentType.LEFT,
+                spacing: { after: 100 },
+            }),
+        );
+
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: profile.title,
+                        size: 24,
+                        color: "374151",
+                    }),
+                ],
+                spacing: { after: 50 },
+            }),
+        );
+
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: profile.location,
+                        size: 20,
+                        color: "6b7280",
+                    }),
+                ],
+                spacing: { after: 200 },
+            }),
+        );
+
+        // Contact Information
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: "Email: ",
+                        bold: true,
+                    }),
+                    new TextRun({
+                        text: profile.email,
+                        color: "10b981",
+                    }),
+                ],
+                spacing: { after: 50 },
+            }),
+        );
+
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: "LinkedIn: ",
+                        bold: true,
+                    }),
+                    new TextRun({
+                        text: "linkedin.com/in/jacoblewinski",
+                        color: "10b981",
+                    }),
+                ],
+                spacing: { after: 50 },
+            }),
+        );
+
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: "GitHub: ",
+                        bold: true,
+                    }),
+                    new TextRun({
+                        text: "github.com/JLewinski",
+                        color: "10b981",
+                    }),
+                ],
+                spacing: { after: 300 },
+            }),
+        );
+
+        // Core Skills Section
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: "Core Skills",
+                        bold: true,
+                        size: 24,
+                        color: "10b981",
+                    }),
+                ],
+                heading: HeadingLevel.HEADING_2,
+                spacing: { after: 100 },
+                border: {
+                    bottom: {
+                        color: "e5e7eb",
+                        space: 1,
+                        style: BorderStyle.SINGLE,
+                        size: 6,
+                    },
+                },
+            }),
+        );
+
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: profile.topSkills.join(" • "),
+                        size: 20,
+                    }),
+                ],
+                spacing: { after: 300 },
+            }),
+        );
+
+        // Professional Summary Section
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: "Professional Summary",
+                        bold: true,
+                        size: 24,
+                        color: "10b981",
+                    }),
+                ],
+                heading: HeadingLevel.HEADING_2,
+                spacing: { after: 100 },
+                border: {
+                    bottom: {
+                        color: "e5e7eb",
+                        space: 1,
+                        style: BorderStyle.SINGLE,
+                        size: 6,
+                    },
+                },
+            }),
+        );
+
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: profile.summary,
+                        size: 20,
+                    }),
+                ],
+                spacing: { after: 300 },
+            }),
+        );
+
+        // Professional Experience Section
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: "Professional Experience",
+                        bold: true,
+                        size: 24,
+                        color: "10b981",
+                    }),
+                ],
+                heading: HeadingLevel.HEADING_2,
+                spacing: { after: 100 },
+                border: {
+                    bottom: {
+                        color: "e5e7eb",
+                        space: 1,
+                        style: BorderStyle.SINGLE,
+                        size: 6,
+                    },
+                },
+            }),
+        );
+
+        for (const exp of profile.experience.filter((e) => e.includeInPDF)) {
+            // Position and Duration
+            sections.push(
+                new Paragraph({
+                    children: [
+                        new TextRun({
+                            text: exp.position,
+                            bold: true,
+                            size: 22,
+                        }),
+                        new TextRun({
+                            text: `\t${exp.duration}`,
+                            size: 20,
+                            color: "6b7280",
+                        }),
+                    ],
+                    spacing: { after: 50 },
+                }),
+            );
+
+            // Company and Location
+            sections.push(
+                new Paragraph({
+                    children: [
+                        new TextRun({
+                            text:
+                                exp.company +
+                                (exp.location ? ` • ${exp.location}` : ""),
+                            size: 20,
+                            color: "6b7280",
+                            italics: true,
+                        }),
+                    ],
+                    spacing: { after: 100 },
+                }),
+            );
+
+            // Description bullets
+            for (const desc of exp.description) {
+                sections.push(
+                    new Paragraph({
+                        children: [
+                            new TextRun({
+                                text: desc,
+                                size: 20,
+                            }),
+                        ],
+                        bullet: {
+                            level: 0,
+                        },
+                        spacing: { after: 50 },
+                    }),
+                );
+            }
+
+            sections.push(
+                new Paragraph({
+                    text: "",
+                    spacing: { after: 200 },
+                }),
+            );
+        }
+
+        // Education Section
+        sections.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: "Education",
+                        bold: true,
+                        size: 24,
+                        color: "10b981",
+                    }),
+                ],
+                heading: HeadingLevel.HEADING_2,
+                spacing: { after: 100 },
+                border: {
+                    bottom: {
+                        color: "e5e7eb",
+                        space: 1,
+                        style: BorderStyle.SINGLE,
+                        size: 6,
+                    },
+                },
+            }),
+        );
+
+        for (const edu of profile.education) {
+            sections.push(
+                new Paragraph({
+                    children: [
+                        new TextRun({
+                            text: edu.degree,
+                            bold: true,
+                            size: 22,
+                        }),
+                        new TextRun({
+                            text: `\t${edu.duration}`,
+                            size: 20,
+                            color: "6b7280",
+                        }),
+                    ],
+                    spacing: { after: 50 },
+                }),
+            );
+
+            sections.push(
+                new Paragraph({
+                    children: [
+                        new TextRun({
+                            text:
+                                edu.institution +
+                                (edu.location ? ` • ${edu.location}` : ""),
+                            size: 20,
+                            color: "6b7280",
+                            italics: true,
+                        }),
+                    ],
+                    spacing: { after: 200 },
+                }),
+            );
+        }
+
+        // Create document
+        const doc = new Document({
+            sections: [
+                {
+                    properties: {},
+                    children: sections,
+                },
+            ],
+        });
+
+        // Generate and download
+        const blob = await Packer.toBlob(doc);
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = `${profile.name.replace(/\s+/g, "_")}_Resume.docx`;
+        link.click();
+        URL.revokeObjectURL(url);
+    }
 </script>
 
 <header class="header">
@@ -57,25 +400,46 @@
         <div class="skills-section">
             <div class="skills-header">
                 <h3 class="skills-title">Top Skills</h3>
-                <a href="/pdf" class="pdf-button" target="_blank">
-                    <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    >
-                        <path
-                            d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-                        />
-                        <polyline points="14,2 14,8 20,8" />
-                        <line x1="16" y1="13" x2="8" y2="13" />
-                        <line x1="16" y1="17" x2="8" y2="17" />
-                        <polyline points="10,9 9,9 8,9" />
-                    </svg>
-                    Download
-                </a>
+                <div class="download-buttons">
+                    <a href="/pdf" class="pdf-button">
+                        <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path
+                                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                            />
+                            <polyline points="14,2 14,8 20,8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                            <polyline points="10,9 9,9 8,9" />
+                        </svg>
+                        Download PDF
+                    </a>
+                    <button onclick={downloadAsWord} class="pdf-button">
+                        <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path
+                                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                            />
+                            <polyline points="14,2 14,8 20,8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                            <polyline points="10,9 9,9 8,9" />
+                        </svg>
+                        Download Word
+                    </button>
+                </div>
             </div>
             <div class="skills-list">
                 {#each profile.topSkills as skill}
@@ -210,6 +574,12 @@
         font-weight: 600;
     }
 
+    .download-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
     .pdf-button {
         display: inline-flex;
         align-items: center;
@@ -224,6 +594,7 @@
         border: 1px solid rgba(255, 255, 255, 0.3);
         backdrop-filter: blur(10px);
         transition: all 0.2s ease;
+        cursor: pointer;
     }
 
     .pdf-button:hover {
