@@ -36,7 +36,7 @@ export const profileData: ProfileData = {
     email: "jdlewinski@outlook.com",
     linkedin: "https://www.linkedin.com/in/jacoblewinski",
     github: "https://github.com/JLewinski",
-    topSkills: ["ASP.NET Core", "JavaScript", "SQL", "Dev Ops", "Svelte"],
+    topSkills: ["ASP.NET Core", "JavaScript", "SQL", "Dev Ops", "Blazor", "Svelte"],
     summary: "Results-driven Senior Software Engineer with deep expertise in architecting and delivering performant, maintainable, and secure web applications. Proven success modernizing legacy .NET solutions, elevating frontend experiences with contemporary frameworks (Svelte, React), and improving developer velocity through clean architecture, automation, and effective mentoring. Passionate about translating business objectives into scalable technical solutions and continuously elevating code quality, reliability, and user experience.",
     personalNote: "Outside of engineering, I'm a dedicated husband and father, continually inspired by time with my wife and young daughter—fueling both balance and purpose in my professional craft.",
     experience: [
@@ -56,7 +56,7 @@ export const profileData: ProfileData = {
             position: "Software Developer II",
             duration: "August 2023 - September 2024 (1 year 2 months)",
             description: [
-                "Led modernization of legacy ASP.NET MVC features to contemporary component-based frontends (Svelte 5 / React), improving maintainability and user experience.",
+                "Led modernization of legacy ASP.NET MVC features to contemporary component-based frontends (Blazor / Svelte 5 / React), improving maintainability and user experience.",
                 "Implemented data access and API enhancements using Entity Framework (code-first & database-first), FastEndpoints, and modern tooling to streamline delivery."
             ],
             includeInPDF: true
@@ -98,7 +98,7 @@ export const profileData: ProfileData = {
             duration: "January 2017 - June 2019 (2 years 6 months)",
             location: "Auburn, Alabama",
             description: [
-                "Delivered full-stack web solutions using C#, SQL, Entity Framework, JavaScript, MVC, and Knockout.js in an agile environment.",
+                "Delivered full-stack web solutions using C#, SQL, Entity Framework, JavaScript, MVC, Knockout.js, Blazor, and Angular in an agile environment.",
                 "Promoted to team lead, providing technical direction, mentoring peers, and ensuring consistent delivery quality across student development teams."
             ],
             includeInPDF: true
