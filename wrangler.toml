@@ -7,8 +7,5 @@ compatibility_flags = ["nodejs_compat"]
 command = "pnpm run build"
 publish = "build"
 
-[env.production]
-# You can add environment variables here if needed
-
-[env.preview]
-# Preview environment variables
+# For SvelteKit adapter-cloudflare
+pages_build_output_dir = ".svelte-kit/cloudflare"
