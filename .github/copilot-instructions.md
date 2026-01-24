@@ -6,10 +6,10 @@ This is a personal profile/resume application built with SvelteKit to showcase J
 ## Key Instructions
 
 ### Personal Information Source
-- **Always reference `Profile.md`** for accurate information about Jacob Lewinski
+- **Always reference `README.md`** for accurate information about Jacob Lewinski
 - This file contains his current contact information, work experience, education, and skills
 - Use this as the single source of truth for all personal and professional details
-- Do not make assumptions about his background - refer to the Profile.md file
+- Do not make assumptions about his background - refer to the README.md file
 
 ### Technology Stack Requirements
 - **Use Svelte 5 in runes mode** for all component development
@@ -26,7 +26,7 @@ This is a personal profile/resume application built with SvelteKit to showcase J
 - Implement responsive design for mobile and desktop
 
 ### Content Structure
-Based on Profile.md, include sections for:
+Based on README.md, include sections for:
 - Contact information and professional links
 - Professional summary
 - Work experience (chronological order)
@@ -47,4 +47,4 @@ Based on Profile.md, include sections for:
 - Ensure fast loading times and smooth user experience
 - Use appropriate image optimization and lazy loading when applicable
 
-Remember: Always cross-reference Profile.md when implementing any personal or professional information about Jacob Lewinski.
+Remember: Always cross-reference README.md when implementing any personal or professional information about Jacob Lewinski.

@@ -36,7 +36,7 @@ export const profileData: ProfileData = {
     email: "jdlewinski@outlook.com",
     linkedin: "https://www.linkedin.com/in/jacoblewinski",
     github: "https://github.com/JLewinski",
-    topSkills: ["ASP.NET Core", "JavaScript", "SQL", "Dev Ops", "Blazor", "Svelte"],
+    topSkills: ["C#", "ASP.NET Core", "JavaScript", "SQL", "DevOps", "Blazor", "Svelte"],
     summary: "Results-driven Senior Software Engineer with deep expertise in architecting and delivering performant, maintainable, and secure web applications. Proven success modernizing legacy .NET solutions, elevating frontend experiences with contemporary frameworks (Svelte, React), and improving developer velocity through clean architecture, automation, and effective mentoring. Passionate about translating business objectives into scalable technical solutions and continuously elevating code quality, reliability, and user experience.",
     personalNote: "Outside of engineering, I'm a dedicated husband and father, continually inspired by time with my wife and young daughter—fueling both balance and purpose in my professional craft.",
     experience: [
@@ -45,47 +45,56 @@ export const profileData: ProfileData = {
             position: "Senior Software Developer",
             duration: "September 2024 - Present",
             description: [
-                "Architect scalable enterprise applications, elevate code quality standards, and mentor engineers while advancing modernization initiatives across the .NET and frontend stacks.",
-                "Drove rigorous code review practices and mentorship, fostering a collaborative engineering culture and accelerating skill development within the team.",
-                "All in addition to responsibilities held as Software Developer II."
+                "Architected and developed internal web application using ASP.NET Core and Fast Endpoints, SQL database, and Svelte Front End currently in use for license management of our customers.",
+                "Developed many POC applications using different UI and Backend frameworks to provide options for our team to choose a modern tech stack for all future applications. UI frameworks included Svelte, Vue, Blazor, React, and Angular. Backend was all done in ASP.NET but structured differently using Fast Endpoints, Minimal API, and MediatR.",
+                "Architected and developed a report bundler and scheduler for our customers which builds off existing report tooling in our ASP.NET Core MVC application and SQL databases allowing customers to run multiple reports for defined time spans to easily retrieve proper regulatory information that took days to do manually.",
+                "Architect and develop scalable enterprise applications in C#, elevate code quality standards, and mentor engineers while advancing modernization initiatives across .NET and frontend stacks.",
+                "Developed a new Maui application based off our existing Xamarin application for a new type of emissions requirement impacting all our customers and allowing us to expand our reach. Additionally made modifications to an existing Sync Service API used by the mobile applications to support this and maintain compatibility."
             ],
             includeInPDF: true
         },
         {
             company: "Alliance Technical Group",
             position: "Software Developer II",
-            duration: "August 2023 - September 2024 (1 year 2 months)",
+            duration: "August 2023 - September 2024",
             description: [
-                "Led modernization of legacy ASP.NET MVC features to contemporary component-based frontends (Blazor / Svelte 5 / React), improving maintainability and user experience.",
-                "Implemented data access and API enhancements using Entity Framework (code-first & database-first), FastEndpoints, and modern tooling to streamline delivery."
+                "Refactored existing C# code to use EF Core instead of LLBLGen and made efficiency modifications to optimize the number of times data was being requested from the database providing improvements of up to ~50%.",
+                "Refactored existing ASP.NET Core MVC front end to use separate JS files, no View Bag, and partial Views to consolidate logic and code, separate functionality from display, improve type safety and readability, and improved UI/UX by removing unnecessary elements/requests",
+                "Implemented team git standards using master, staging, and feature branches as well as pull requests",
+                "Implemented CICD pipelines in Azure DevOps",
+                "Implemented SQL Projects to keep track of schema changes",
+                "Developed multi-tenant access to our existing ASP.NET Core MVC application to allow users to quickly switch between tenants they have access to.",
+                "Operate effectively in an Agile/Scrum environment running 2-week sprint cycles, contributing to sprint planning, daily standups, sprint reviews, and retrospectives with a team of 10 people, 7 developers, 1 scrum master, 1 product owner, and 1 business analyst as well as an off shore QA team.",
+                "All projects mentioned support over 10000 customers each with potentially 100's of users."
             ],
             includeInPDF: true
         },
         {
             company: "Powerserve",
             position: "Software Engineer",
-            duration: "September 2021 - July 2023 (1 year 11 months)",
+            duration: "September 2021 - July 2023",
             description: [
-                "Delivered and supported multiple web applications using ASP.NET MVC / Core, ensuring robustness, performance, and clean separation of concerns.",
-                "Engineered optimized SQL Server schemas, views, and stored procedures to enhance data integrity and application responsiveness.",
-                "Refactored hard-coded SQL data layers to Entity Framework, significantly improving maintainability and testability."
+                "Delivered and supported web application using ASP.NET Core MVC, ensuring robustness, performance, and clean separation of concerns for our manufacturing clients where over 100 workstations were constantly making requests throughout the plant to track their inventory and manufacturing process through manual entry and automated entry by industrial machinery.",
+                "Refactored hard-coded SQL data layers to Entity Framework, significantly improving maintainability and testability for our manufacturing clients",
+                "Developed new ASP.NET Core website with custom TypeScript frontend for a new client.",
+                "Used Git with GitHub utilizing branches for different features.",
+                "Worked on a team of 3 developers meeting daily and maintaining a con bon board based on current client needs."
             ],
             includeInPDF: true
         },
         {
             company: "Torch Technologies, Inc.",
             position: "Software Engineer",
-            duration: "April 2020 - September 2021 (1 year 6 months)",
-            location: "Huntsville, Alabama, United States",
+            duration: "April 2020 - September 2021",
             description: [
-                "Developed full-stack solutions leveraging .NET and WPF for internal tooling and large-scale enterprise initiatives, contributing reusable components and production-quality features."
+                "Developed full-stack solutions leveraging .NET and WPF for internal tooling and large-scale enterprise initiatives within the DOD, contributing reusable components and production-quality features."
             ],
             includeInPDF: true
         },
         {
             company: "Robins Air Force Base",
             position: "Electronics Engineer",
-            duration: "June 2019 - April 2020 (11 months)",
+            duration: "June 2019 - April 2020",
             description: [
                 "Built .NET applications to streamline embedded systems testing workflows and improve engineering efficiency within mission-focused environments.",
                 "Maintained and enhanced C++ embedded software, ensuring reliability and alignment with stringent operational requirements."
@@ -95,50 +104,24 @@ export const profileData: ProfileData = {
         {
             company: "Auburn University - Campus Web Solutions",
             position: "Full Stack Developer",
-            duration: "January 2017 - June 2019 (2 years 6 months)",
-            location: "Auburn, Alabama",
+            duration: "January 2017 - June 2019",
             description: [
-                "Delivered full-stack web solutions using C#, SQL, Entity Framework, JavaScript, MVC, Knockout.js, Blazor, and Angular in an agile environment.",
+                "Delivered full-stack web solutions using C#, SQL, Entity Framework, JavaScript, MVC, Knockout.js, Blazor, and Angular in an Agile environment.",
                 "Promoted to team lead, providing technical direction, mentoring peers, and ensuring consistent delivery quality across student development teams."
             ],
             includeInPDF: true
-        },
-        {
-            company: "Best Buy",
-            position: "Sales Associate",
-            duration: "June 2016 - August 2016 (3 months)",
-            location: "Mayfield Heights, OH",
-            description: [
-                "Advised customers on end-to-end computing solutions, aligning product capabilities with user needs."
-            ],
-            includeInPDF: false
-        },
-        {
-            company: "Sandbox Computers for Kids, Inc.",
-            position: "Software Developer and Instructor",
-            duration: "June 2015 - October 2015 (5 months)",
-            location: "Thousand Oaks, California",
-            description: [
-                "Developed instructional and administrative applications; created curriculum and lesson plans; instructed K-12 students; mentored project work; and supported outreach initiatives."
-            ],
-            includeInPDF: false
         }
     ],
     education: [
         {
             institution: "Auburn University",
             degree: "Bachelor's Degree, Computer Engineering",
-            duration: "2016 - May 2019"
+            duration: "May 2019"
         },
         {
             institution: "Moorpark College",
             degree: "Pre-Engineering",
             duration: "2014 - 2015"
-        },
-        {
-            institution: "Agoura High School",
-            degree: "High School, General Studies",
-            duration: "2010 - 2014"
         }
     ]
 };
