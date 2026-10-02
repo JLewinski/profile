@@ -12,11 +12,11 @@ Huntsville, Alabama
 
 ## **Core Skills**
 
-C# • ASP.NET Core • JavaScript • SQL • DevOps • Blazor • Svelte • GitHub Copilot • Claude • Codex • Python • Azure Data
+C# • ASP.NET Core • JavaScript • SQL • DevOps • GitHub Actions • GitHub Enterprise • Blazor • Svelte • GitHub Copilot • Claude • Codex • Python • Azure Data
 
 ## **Professional Summary**
 
-Results-driven Senior Software Engineer with deep expertise in architecting and delivering performant, maintainable, and secure web applications. Proven success modernizing legacy .NET solutions, elevating frontend experiences with contemporary frameworks (Svelte, React), and improving developer velocity through clean architecture, automation, and effective mentoring. Experienced in applying AI-assisted development workflows with GitHub Copilot, Claude, and Codex across code generation, chat-driven problem solving, and agent-based automation to accelerate delivery and improve team productivity, beginning with GitHub Copilot adoption during earlier development roles and continuing through advanced workflow customization. Passionate about translating business objectives into scalable technical solutions and continuously elevating code quality, reliability, and user experience while expanding my expertise in Python and Azure data workflows.
+Results-driven Senior Software Engineer with deep expertise in architecting and delivering performant, maintainable, and secure web applications. Proven success modernizing legacy .NET solutions, migrating CI/CD workflows from Azure DevOps and other systems to GitHub Actions in GitHub Enterprise, elevating frontend experiences with contemporary frameworks (Svelte, React), and improving developer velocity through clean architecture, automation, and effective mentoring. Experienced in applying AI-assisted development workflows with GitHub Copilot, Claude, and Codex across code generation, chat-driven problem solving, and agent-based automation to accelerate delivery and improve team productivity, beginning with GitHub Copilot adoption during earlier development roles and continuing through advanced workflow customization. Passionate about translating business objectives into scalable technical solutions and continuously elevating code quality, reliability, and user experience while expanding my expertise in Python and Azure data workflows.
 
 ## **Professional Experience**
 
@@ -25,6 +25,7 @@ Results-driven Senior Software Engineer with deep expertise in architecting and 
 _Alliance Technical Group_
 
 - Architected and developed internal web application using ASP.NET Core and Fast Endpoints, SQL database, and Svelte Front End currently in use for license management of our customers.
+- Migrated Azure DevOps pipelines and other CI/CD workflows to GitHub Actions as the team transitioned to GitHub Enterprise, adapting existing automation to the new platform.
 - Developed and refined AI-assisted development workflows using GitHub Copilot, Claude, and Codex in completion, chat, and agent modes, including custom skills and automation patterns tailored to team workflows and project delivery.
 - Developed many POC applications using different UI and Backend frameworks to provide options for our team to choose a modern tech stack for all future applications. UI frameworks included Svelte, Vue, Blazor, React, and Angular. Backend was all done in ASP.NET but structured differently using Fast Endpoints, Minimal API, and MediatR.
 - Architected and developed a report bundler and scheduler for our customers which builds off existing report tooling in our ASP.NET Core MVC application and SQL databases allowing customers to run multiple reports for defined time spans to easily retrieve proper regulatory information that took days to do manually.
