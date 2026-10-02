@@ -12,11 +12,11 @@ Huntsville, Alabama
 
 ## **Core Skills**
 
-C# • ASP.NET Core • JavaScript • SQL • DevOps • Blazor • Svelte
+C# • ASP.NET Core • JavaScript • SQL • DevOps • Blazor • Svelte • GitHub Copilot • Claude • Codex • Python • Azure Data
 
 ## **Professional Summary**
 
-Results-driven Senior Software Engineer with deep expertise in architecting and delivering performant, maintainable, and secure web applications. Proven success modernizing legacy .NET solutions, elevating frontend experiences with contemporary frameworks (Svelte, React), and improving developer velocity through clean architecture, automation, and effective mentoring. Passionate about translating business objectives into scalable technical solutions and continuously elevating code quality, reliability, and user experience.
+Results-driven Senior Software Engineer with deep expertise in architecting and delivering performant, maintainable, and secure web applications. Proven success modernizing legacy .NET solutions, elevating frontend experiences with contemporary frameworks (Svelte, React), and improving developer velocity through clean architecture, automation, and effective mentoring. Experienced in applying AI-assisted development workflows with GitHub Copilot, Claude, and Codex across code generation, chat-driven problem solving, and agent-based automation to accelerate delivery and improve team productivity, beginning with GitHub Copilot adoption during earlier development roles and continuing through advanced workflow customization. Passionate about translating business objectives into scalable technical solutions and continuously elevating code quality, reliability, and user experience while expanding my expertise in Python and Azure data workflows.
 
 ## **Professional Experience**
 
@@ -25,16 +25,19 @@ Results-driven Senior Software Engineer with deep expertise in architecting and 
 _Alliance Technical Group_
 
 - Architected and developed internal web application using ASP.NET Core and Fast Endpoints, SQL database, and Svelte Front End currently in use for license management of our customers.
+- Developed and refined AI-assisted development workflows using GitHub Copilot, Claude, and Codex in completion, chat, and agent modes, including custom skills and automation patterns tailored to team workflows and project delivery.
 - Developed many POC applications using different UI and Backend frameworks to provide options for our team to choose a modern tech stack for all future applications. UI frameworks included Svelte, Vue, Blazor, React, and Angular. Backend was all done in ASP.NET but structured differently using Fast Endpoints, Minimal API, and MediatR.
 - Architected and developed a report bundler and scheduler for our customers which builds off existing report tooling in our ASP.NET Core MVC application and SQL databases allowing customers to run multiple reports for defined time spans to easily retrieve proper regulatory information that took days to do manually.
 - Architect and develop scalable enterprise applications in C#, elevate code quality standards, and mentor engineers while advancing modernization initiatives across .NET and frontend stacks.
 - Developed a new Maui application based off our existing Xamarin application for a new type of emissions requirement impacting all our customers and allowing us to expand our reach. Additionally made modifications to an existing Sync Service API used by the mobile applications to support this and maintain compatibility.
+- Continuing to expand expertise in Python and Azure data technologies to support modern data workflows and cloud-native integrations.
 
 **Software Developer II** August 2023 - September 2024
 
 _Alliance Technical Group_
 
 - Refactored existing C# code to use EF Core instead of LLBLGen and made efficiency modifications to optimize the number of times data was being requested from the database providing improvements of up to ~50%.
+- Adopted GitHub Copilot early in development workflows, using inline code completion, chat assistance, and iterative refinement to speed up refactoring, debugging, and feature development while maintaining clean, maintainable code quality.
 - Refactored existing ASP.NET Core MVC front end to use separate JS files, no View Bag, and partial Views to consolidate logic and code, separate functionality from display, improve type safety and readability, and improved UI/UX by removing unnecessary elements/requests
 - Implemented team git standards using master, staging, and feature branches as well as pull requests
 - Implemented CICD pipelines in Azure DevOps
@@ -48,6 +51,7 @@ _Alliance Technical Group_
 _Powerserve_
 
 - Delivered and supported web application using ASP.NET Core MVC, ensuring robustness, performance, and clean separation of concerns for our manufacturing clients where over 100 workstations were constantly making requests throughout the plant to track their inventory and manufacturing process through manual entry and automated entry by industrial machinery.
+- Used GitHub Copilot throughout development workflows to accelerate boilerplate generation, code exploration, refactoring, and troubleshooting in both ASP.NET Core MVC and TypeScript-heavy front-end work.
 - Refactored hard-coded SQL data layers to Entity Framework, significantly improving maintainability and testability for our manufacturing clients
 - Developed new ASP.NET Core website with custom TypeScript frontend for a new client.
 - Used Git with GitHub utilizing branches for different features.
