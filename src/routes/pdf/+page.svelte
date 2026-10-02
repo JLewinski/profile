@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { profileData } from "$lib/data/profile.js";
+    import { profileData } from "#lib/data/profile.js";
     
 </script>
 
