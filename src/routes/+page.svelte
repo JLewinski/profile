@@ -1,11 +1,11 @@
 <script lang="ts">
-    import Header from "$lib/components/Header.svelte";
-    import Summary from "$lib/components/Summary.svelte";
-    import Experience from "$lib/components/Experience.svelte";
-    import Education from "$lib/components/Education.svelte";
-    import Projects from "$lib/components/Projects.svelte";
-    import Footer from "$lib/components/Footer.svelte";
-    import { profileData } from "$lib/data/profile";
+    import Header from "#lib/components/Header.svelte";
+    import Summary from "#lib/components/Summary.svelte";
+    import Experience from "#lib/components/Experience.svelte";
+    import Education from "#lib/components/Education.svelte";
+    import Projects from "#lib/components/Projects.svelte";
+    import Footer from "#lib/components/Footer.svelte";
+    import { profileData } from "#lib/data/profile.js";
 </script>
 
 <svelte:head>
