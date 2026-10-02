@@ -17,6 +17,7 @@ This is a personal profile/resume application built with SvelteKit to showcase J
 - Follow Svelte 5 best practices and modern patterns
 - Use SvelteKit for routing and SSR capabilities
 - TypeScript is preferred for type safety
+- Use pnpm instead of npm for package management
 
 ### Development Guidelines
 - Create a professional, clean, and responsive design
